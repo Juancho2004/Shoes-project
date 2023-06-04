@@ -1,0 +1,45 @@
+.TiendaTabs__title{
+    padding: 20px;
+    font-family: var(--font-family-1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* .TiendaItem__container::-webkit-scrollbar{
+    width: 1%;
+    height: 1vh;
+}
+.TiendaItem__container::-webkit-scrollbar-thumb{
+    background-color: #939393;
+    border-radius: 20px;
+    height: 10vh;
+} */
+
+
+.TiendaTabs__btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    
+}
+
+.TiendaTabs__cta {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-family: var(--font-family-1);
+
+    
+}
+
+.TiendaTabs__cta--active{
+    border-bottom: 2px solid #e5e5e5;
+
+    
+}

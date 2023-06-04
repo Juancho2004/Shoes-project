@@ -1,0 +1,55 @@
+header{
+    width: 100%;
+}
+
+
+.nav{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__services{
+    padding: 5px;
+    transition: .2s;
+}
+.nav__services:hover{
+    background-color: rgb(219, 216, 216);
+    border-radius: 50px;
+
+}
+
+.nav__logo{
+    height: 10vh;
+    cursor: pointer;
+}
+
+/* ANUNCIO */
+.section__anuncio{
+    width: 100%;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 10px 0px 0px;
+}
+
+.anuncio__title{
+    font-family: var(--font-family-1);
+    font-size: 16px;
+}
+
+.anuncio__paragraph{
+    font-family: var(--font-family-1);
+    font-size: 12px;
+}
+
+.anuncio__paragraph a{
+    color: #111111;
+}
+
