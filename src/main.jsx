@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
-import {Navbar} from './nav/index'
+// import {Navbar} from './nav/index'
 import './main.css'
-import { Tienda } from './tienda'
+// import { Tienda } from './tienda'
 import { PrincipalView } from './Principal-view';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,5 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 )
+
+
 
 

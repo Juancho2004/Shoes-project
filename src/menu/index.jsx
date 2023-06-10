@@ -1,3 +1,4 @@
+import React from 'react'
 import './main.css'
 import { AsideSection } from '../asideSection';
 import imgJordan from './img/jordan.png'
