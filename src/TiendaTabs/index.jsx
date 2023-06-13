@@ -59,7 +59,7 @@ export function TiendaTabs() {
                   <li key={value.id}>
                     <h2>{value.genero}</h2>
                     <img src={`public/img/${value.imagen_url}`} alt="" width={80}/>
-                    <p>{value.marca}</p>
+                    <a href="">{value.marca}</a>
                     <p>{value.modelo}</p>
                     <p>{value.talla}</p>
                   </li>
