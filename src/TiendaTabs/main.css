@@ -29,6 +29,10 @@
     
 }
 
+.TiendaTabs__btns li {
+    cursor: pointer;
+}
+
 .TiendaTabs__cta {
     border: none;
     outline: none;

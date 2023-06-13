@@ -2,6 +2,7 @@
 import React from 'react'
 import { useFetch } from './useFetch';
 import { useState } from 'react';
+import imgNike from '../../public/img/imagen35_2.jpg';
 import './main.css';
 
 
@@ -10,63 +11,62 @@ export function TiendaTabs() {
   
   //   {
   //     id: 1,
-  //     title:{},
-  //     desc: 'prueba1',
-  //     buttom : 'Adidas',
-  //     image:'./img/1.jpg',
-  //     link:'Comprar'
+  //     buttom : 'Nike',
   //   },
   //   {
   //     id: 2,
-  //     title:'Nike Air force 1',
-  //     desc: 'prueba2',
-  //     buttom : 'Nike',
-  //     image:"./img/prueba2.jpg",
-  //     link:'Comprar'
+  //     buttom : 'Adidas',
   //   },
   //   {
   //     id: 3,
-  //     title:'Jordan retro 1',
-  //     desc: 'prueba3',
-  //     buttom : 'Jordan',
-  //     image:"./img/prueba3.jpg",
-  //     link:'Comprar',
-  //   },
-  //   {
-  //     id: 4,
-  //     title:'Jordan retro 1',
-  //     desc: 'prueba3',
   //     buttom : 'Puma',
-  //     image:"./img/prueba3.jpg",
-  //     link:'Comprar',
   //   },
   // ]
 
-  const { data } = useFetch('http://127.0.0.1:5000/zapatillas');
-  const [value, setValue] = useState(0);
-  // const { marca, } = data[value];
+  
 
+  const { data } = useFetch(`http://127.0.0.1:5000/zapatillas`);
+  // const { nike } = useFetch('http://127.0.0.1:5000/marcas/1/zapatillas');
+  // const [tabs] = useState(list);
+  const [value, setValue] = useState('');
+  // const [nikeValue, setNikeValue] = useState(nike);
+  // console.log(nike)
 
   return (
     <>
       <section className='TiendaTabs'>
         <h1 className='TiendaTabs__title'>Marcas</h1>
-        <div>
-          <ul className='TiendaTabs__btns'>
-            {data?.map((ele, index) => (
-              <li key={ele.id}>
-                <button onClick={()=> setValue(index)} className={`TiendaTabs__cta ${index === value && 'TiendaTabs__cta--active'}`}>{ele.marca}</button>
-              </li>
-            ))}
-          </ul>
           <div>
-          {data?.map((ele, index) => (
-              <li key={ele.id}>
-                <img src={`public/img/${ele.imagen_url}`} alt="" width={80}/>
-              </li>
+            {data?.map((ele, index) => (
+              <ul className='TiendaTabs__btns'>
+                  <li onClick={()=> setValue(ele)}>{ele.marca}</li>
+              </ul>
             ))}   
+            <div>
+            {value === '' ? ( 
+                <ul>
+                  <li>
+                    <h2>hombre</h2>
+                    <img src={imgNike} alt="" width={80}/>
+                    <p>Nike</p>
+                    <p>Jordan Retro 1</p>
+                    <p>$40</p>
+                  </li>
+                </ul>
+                // <div>nike</div>
+            ): (
+              <ul>
+                  <li key={value.id}>
+                    <h2>{value.genero}</h2>
+                    <img src={`public/img/${value.imagen_url}`} alt="" width={80}/>
+                    <p>{value.marca}</p>
+                    <p>{value.modelo}</p>
+                    <p>{value.talla}</p>
+                  </li>
+                </ul>
+            )}
+            </div>
           </div>
-        </div>
       </section>
     </>
   )     
