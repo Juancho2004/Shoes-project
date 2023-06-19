@@ -1,70 +1,21 @@
-
+import React from 'react'                                         
 import './main.css';
-import imgMuestra from './shoes.jpg'
 
-export function TiendaGrilla ({title,genres,precio}){
+
+
+export function TiendaGrilla ({productos}){
     return(
         <div className="tienda__grilla">
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
-            <div className='tienda__containers'>
-                <img src={imgMuestra} alt="" className='img__muestra'/>
-                    <p className='tienda__title'>{title}</p>
-                    <p className='tienda__generos'>{genres}</p>
-                    <p className='tienda__price'>{precio}</p>
-            </div>
+            {productos.map((ele) => ( 
+                <ul className='tienda__containers'>
+                    <li key={ele.id}>
+                        <img src={`public/img/${ele.imagen_url}`} alt="" className='img__muestra'/>
+                        <p className='tienda__title'>{ele.nombre}</p>
+                        <p className='tienda__generos'>{ele.genero}</p>
+                        <p className='tienda__price'>{ele.talla}</p>
+                    </li>
+                </ul>
+                ))}
         </div>
        )
 }

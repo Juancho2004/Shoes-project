@@ -27,7 +27,8 @@ header{
 }
 
 .nav__logo{
-    height: 10vh;
+    height: 6vh;
+    margin: 10px;
     cursor: pointer;
 }
 

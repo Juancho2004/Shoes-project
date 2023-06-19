@@ -1,6 +1,8 @@
 import './main.css';
 import {motion} from 'framer-motion'  
 import imgSearch from './search.svg'
+import React from 'react'
+
 
 const variants = {
 

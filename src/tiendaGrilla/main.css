@@ -1,10 +1,14 @@
 .tienda__grilla{
+    width: 85%;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 55%);
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 49%);
     grid-template-rows: repeat(2, 1fr);
-    margin-top: 10px;
-}
+    overflow: hidden;
+    margin-left: 35px;
+    margin-top: -20px;
+}   
 
 .tienda__title{
     font-family: var(--font-family-1);
@@ -29,6 +33,11 @@
 }
 
 .img__muestra{
-    height: 34vh;
-    width: 195px;
+    width: 98%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+.contenido_productos li p {
+    margin-left: 30px;
 }

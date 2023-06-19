@@ -1,6 +1,6 @@
 import './main.css';
 import React from 'react'
-import imgLogo from './img/nike.png';
+import imgLogo from './img/logo.png';
 import imgSearch from './img/search.svg';
 import imgMenu from './img/menu.svg';
 // import imgBag from './img/bag.svg';
