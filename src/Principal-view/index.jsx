@@ -6,6 +6,7 @@ import { Tienda } from "../tienda";
 export const PrincipalView = () => {
     return (
         <>
+        
         <Tienda/>
          {/* <Navbar/> */}
          {/* <Main/> */}

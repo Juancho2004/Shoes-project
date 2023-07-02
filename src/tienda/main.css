@@ -2,6 +2,7 @@
     width: 100%;
     height: 200vh;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .tienda__banner{

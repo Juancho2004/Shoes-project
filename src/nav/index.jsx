@@ -1,21 +1,23 @@
 import './main.css';
 import React from 'react'
 import imgLogo from './img/logo.png';
+import imgLogo2 from './img/userClose.png';
 import imgSearch from './img/search.svg';
 import imgMenu from './img/menu.svg';
-// import imgBag from './img/bag.svg';
+import imgUser from './img/user.svg';
 import imgClose from './img/close.svg'
 import imgCirclex from './img/circlex.svg'
 import {Menu} from '../menu/index';
 import { useState } from 'react';
-// import { Cesta } from '../cesta';
 import { Search } from '../search';
+import { Tooltip } from '../tooltip';
+import { User } from '../User';
 // import { Link } from 'react-router-dom';
 
 
 export function Navbar(){
     const [showModal, setShowModal] = useState(false)
-    // const [showActual, setActualizate] = useState(false)
+    const [showActual, setActualizate] = useState(false)
     const [searchActual, searchActualizate] = useState(false)
   
 
@@ -27,13 +29,13 @@ export function Navbar(){
         searchActualizate(false)
     }
 
-    // function handleActiveModal(){
-    //     setActualizate(true)
-    // }
+    function handleActiveModal(){
+        setActualizate(true)
+    }
 
-    // function handleDesactiveModal(){
-    //     setActualizate(false)
-    // }
+    function handleDesactiveModal(){
+        setActualizate(false)
+    }
 
     function handleShowModal(){
         setShowModal(true)
@@ -44,22 +46,17 @@ export function Navbar(){
     }
 
     return(
+        <>
         <header>
 
+            {/* <User/> */}
             {/* MENUHAMBURGUESA */}
             {showModal && <img src={imgClose} className='aside__close' onClick={handleCloseModal}/>}
             {showModal && <Menu/>}
 
             {/* CESTA */}
-            {/* {showActual && <nav className="nav">
-                <img src={imgLogo} className='nav__logo' />
-                    <div className="nav__container" onClick={handleDesactiveModal}>
-                        <img src={imgSearch} className='nav__services'/>
-                        <img src={imgBag} className='nav__services' onClick={handleActiveModal}/>
-                        <img src={imgMenu} className='nav__services' onClick={handleShowModal}/>
-                    </div>
-                </nav>}
-            {showActual  && <Cesta/>} */}
+            {showActual && <img src={imgLogo2} className='user_logo' onClick={handleDesactiveModal}/>}
+            {showActual  && <User/>}
 
             {/* SEARCH */}
             {searchActual && <img src={imgCirclex} className='input__cerrar' onClick={handleSearchDesactive}/>}
@@ -67,15 +64,18 @@ export function Navbar(){
             
 
             <nav className="nav">
-                    <img src={imgLogo} className='nav__logo' />
+                    <img src={imgLogo} className='nav__logo'/>
                 <div className="nav__container">
+                <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
+                <div className="iconSVG">
+                  <img src={imgUser} alt="" onClick={handleActiveModal}/>
+                </div>
+                </div>
                     <img src={imgSearch} className='nav__services' onClick={handleSearchActive}/>
-                    {/* <img src={imgBag} className='nav__services' onClick={handleActiveModal}/> */}
                     <img src={imgMenu} className='nav__services' onClick={handleShowModal}/>
                 </div>
             </nav>
-
-            {/* <Tienda/> */}
         </header>
+    </>
     );
 }

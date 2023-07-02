@@ -16,7 +16,6 @@ export function TiendaTabs() {
   // const [tabs] = useState(list);
   const [value, setValue] = useState('');
   // const [nikeValue, setNikeValue] = useState(nike);
-  // console.log(nike)
   
   return (
     <>

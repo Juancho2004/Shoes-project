@@ -4,7 +4,7 @@ import './main.css';
 export function Error() {
   return (
     <>
-      {alert('¡Tienes un error!')}
+      <h1>Tienes un error</h1>
     </>
   )
 }

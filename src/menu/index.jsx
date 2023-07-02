@@ -9,7 +9,9 @@ import imgBasket from './img/basket.svg'
 import imgShopping from './img/shopping.svg'
 import imgStore from './img/store.svg'
 import imgHelp from './img/help.svg'
+import imgInfo from './img/info.svg'
 import {motion} from 'framer-motion'  
+import { Tooltip } from '../tooltip';
 
 
 const variants = {
@@ -44,7 +46,8 @@ export const Menu = () =>{
       >
 
 
-        <div>{
+        <div>
+          {
           texts.map(text => {
             return <AsideSection texts={text} key={text}/>
           })

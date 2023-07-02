@@ -8,6 +8,26 @@
 
 }
 
+.registre__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.registre__container img{
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-right: 1px;
+}
+
+.aside_registrate{
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: #212529;
+    text-decoration: none;
+}
+
 .aside::-webkit-scrollbar{
     width: 10px;
 }
@@ -44,8 +64,7 @@
 
 .aside__close{
     position: absolute;
-    right: 0;
-    left: 346px;
+    right: 27px;
     top: 10px;
     width: 8%;
     z-index: 2;

@@ -12,12 +12,11 @@ export function Tienda () {
     return(
     <>
             <Navbar/>
-
             <img src={imgWpp} alt="#" className='Tienda__fixed'/>
             <section className='tienda'>
                 <div className="tienda__banner">
                     <p className="banner__title">Devoluciones y entregas gratis</p>
-                    <p className='banner__paragraph'>Como Member, tienes envíos gratuitos y devoluciones gratuitas en un plazo de 30 días. <a href="#">Obtén más información y únete</a></p>
+                    <p className='banner__paragraph'>Como Member, tienes envíos gratuitos y devoluciones gratuitas en un plazo de 30 días. <a href="#">Obtén más información</a></p>
                 </div>
 
                 <TiendaTabs/>

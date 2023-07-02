@@ -29,7 +29,6 @@ header{
 .nav__logo{
     height: 6vh;
     margin: 10px;
-    cursor: pointer;
 }
 
 /* ANUNCIO */
@@ -54,3 +53,46 @@ header{
     color: #111111;
 }
 
+
+/* USER */
+
+.iconDiv {
+    height: 36px;
+    width: 36px;
+    font-family: var(--font-family-1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
+  }
+
+
+  .iconSVG {
+    height: 36px;
+    aspect-ratio: 1 / 1;
+  }
+  .iconDiv:hover,
+  .iconDiv:focus-visible {
+    width: 142px;
+    background-color: rgb(219, 216, 216);
+    transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
+  }
+  .iconDiv:focus-visible {
+    outline: 1px solid var(--color-mid);
+    outline-offset: 4px;
+  }
+  .iconDiv:active {
+    opacity: 0.9;
+  }
+  .iconDiv::after {
+    content: attr(tooltip);
+    margin-left: 12px;
+    animation: fadeIn 600ms linear forwards;
+  }

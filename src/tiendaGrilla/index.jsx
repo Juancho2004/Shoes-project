@@ -6,7 +6,7 @@ import './main.css';
 export function TiendaGrilla ({productos}){
     return(
         <div className="tienda__grilla">
-            {productos.map((ele) => ( 
+            {productos.map((ele, num) => ( 
                 <ul className='tienda__containers'>
                     <li key={ele.id}>
                         <img src={`public/img/${ele.imagen_url}`} alt="" className='img__muestra'/>
