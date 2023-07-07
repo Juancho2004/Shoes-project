@@ -13,8 +13,6 @@ import imgBaloncesto from './img/balocesto.jpg'
 import imgTennis from './img/tennis.jpg'
 import imgTrainning from './img/trainning.jpg'
 import { FooterMain } from '../footerMain/index';
-import { Tienda } from '../tienda/index';
-import { Link } from 'react-router-dom';
 
 
 export function Main (){
@@ -30,7 +28,6 @@ export function Main (){
             <p className="section__descuento">Novedad: Nike Pegasus 40</p>
             <h1 className="section__title">REACTIVIDAD PARA CORRER A TU MANERA.</h1>
             <p className="section__paragraph">En su 40 aniversario, las Pegasus 40 son más reactivas que nunca con un ajuste más amortiguado y personalizado.</p>
-            <Link to='/tienda' className='section__btn'>Comprar</Link>
         </section>
 
         <div className="section__image">

@@ -3,7 +3,7 @@ import React from 'react'
 import imgPlus from './img/plus.svg'
 import imgFacebook from './img/facebook.svg'
 import imgInstagram from './img/instagram.svg'
-import imgTwitter from './img/twitter.svg'
+// import imgTwitter from './img/twitter.svg'
 
 export function FooterTienda (){
     return(
@@ -34,9 +34,13 @@ export function FooterTienda (){
             </div>
     
             <div className="tienda__links">
-                <img src={imgTwitter} className="tienda__link" />
-                <img src={imgFacebook} className="tienda__link" />
-                <img src={imgInstagram} className="tienda__link" />
+                {/* <img src={imgTwitter} className="tienda__link" /> */}
+                <a href="https://www.facebook.com/profile.php?id=100083656920051" target='_blank'>
+                    <img src={imgFacebook} className="tienda__link" />
+                </a>
+                <a href="https://www.instagram.com/mosqueras_shoes/" target='_blank'>
+                    <img src={imgInstagram} className="tienda__link" />
+                </a>
             </div>
     
             <div className="tienda__avisos">

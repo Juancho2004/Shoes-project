@@ -11,7 +11,6 @@ export function Tienda () {
     
     return(
     <>
-            <Navbar/>
             <img src={imgWpp} alt="#" className='Tienda__fixed'/>
             <section className='tienda'>
                 <div className="tienda__banner">
