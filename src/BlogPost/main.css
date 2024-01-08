@@ -1,0 +1,36 @@
+.detalles{
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.detalles_container{
+    margin-top: 30px;
+}
+
+.detalles_container ul {
+    list-style: none;
+}
+
+.img__data{
+    width: 60%;
+    margin-left: 60px;
+}
+
+.marca{
+    color: #111111;
+    font-size: 24px;
+    font-family: var(--font-family-1);
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+
+.genero{
+    font-size: 16px;
+    font-family: var(--font-family-1);    
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+
+.talla{
+    font-size: 20px;
+}

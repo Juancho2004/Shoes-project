@@ -1,0 +1,98 @@
+header{
+    width: 100%;
+}
+
+
+.nav{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__services{
+    padding: 5px;
+    transition: .2s;
+}
+.nav__services:hover{
+    background-color: rgb(219, 216, 216);
+    border-radius: 50px;
+
+}
+
+.nav__logo{
+    height: 6vh;
+    margin: 10px;
+}
+
+/* ANUNCIO */
+.section__anuncio{
+    width: 100%;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 10px 0px 0px;
+}
+
+.anuncio__title{
+    font-family: var(--font-family-1);
+    font-size: 16px;
+}
+
+.anuncio__paragraph{
+    font-family: var(--font-family-1);
+    font-size: 12px;
+}
+
+.anuncio__paragraph a{
+    color: #111111;
+}
+
+
+/* USER */
+
+.iconDiv {
+    height: 36px;
+    width: 36px;
+    font-family: var(--font-family-1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
+  }
+
+
+  .iconSVG {
+    height: 36px;
+    aspect-ratio: 1 / 1;
+  }
+  .iconDiv:hover,
+  .iconDiv:focus-visible {
+    width: 142px;
+    background-color: rgb(219, 216, 216);
+    transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
+  }
+  .iconDiv:focus-visible {
+    outline: 1px solid var(--color-mid);
+    outline-offset: 4px;
+  }
+  .iconDiv:active {
+    opacity: 0.9;
+  }
+  .iconDiv::after {
+    content: attr(tooltip);
+    margin-left: 12px;
+    animation: fadeIn 600ms linear forwards;
+  }

@@ -1,0 +1,57 @@
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: var(--font-family-1);
+    
+    
+}
+
+.cookie{
+    position: fixed;
+    text-align: center;
+    padding: 55px 10px;
+    z-index: 1;
+    color: #fff;
+    background-color: black;
+}
+
+.cookie h2{
+    font-size: 15px;
+}
+
+.cookie span {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid #fff;
+    margin-top: 15px;
+}
+
+.cookie span a{
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+}
+
+.pre-scrim{
+    background-color: hsla(0,0%,7%,.36);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    display: block;
+    transition: opacity .25s,visibility 0s linear .25s;
+}
+
+
+.is-open{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .8s ease,visibility 0s;
+}
+
