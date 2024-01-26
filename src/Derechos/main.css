@@ -1,0 +1,7 @@
+.uso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+}

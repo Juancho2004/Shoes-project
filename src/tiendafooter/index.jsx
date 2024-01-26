@@ -1,23 +1,15 @@
 import './main.css'
-import React from 'react'
+import React, { useState } from 'react'
 import imgPlus from './img/plus.svg'
 import imgFacebook from './img/facebook.svg'
 import imgInstagram from './img/instagram.svg'
 // import imgTwitter from './img/twitter.svg'
 
 export function FooterTienda (){
+
     return(
         <footer className="tienda__footer">
-            {/* <div className="footer_contenedor">
-                <a href="#">TARJETAS DE REGALO</a>
-                <a href="#">BUSCAR UNA TIENDA</a>
-                <a href="#">NIKE JOURNAL</a>
-                <a href="#">HAZTE MEMBER</a>
-                <a href="#">DESCUENTO PARA ESTUDIANTES</a>
-                <a href="#">COMENTARIOS</a>
-                <a href="#">CÓDIGOS PROMOCIONALES</a>
-            </div> */}
-    
+            <div className="footer_contenedor">
             <div className="footer_contenedor2">
                 <figure>
                     <a href="#">AYUDA</a>
@@ -34,7 +26,6 @@ export function FooterTienda (){
             </div>
     
             <div className="tienda__links">
-                {/* <img src={imgTwitter} className="tienda__link" /> */}
                 <a href="https://www.facebook.com/profile.php?id=100083656920051" target='_blank'>
                     <img src={imgFacebook} className="tienda__link" />
                 </a>
@@ -49,6 +40,7 @@ export function FooterTienda (){
                 <a href="#">Terminos de venta</a>
                 <a href="#">Aviso de Legal</a>
             </div>
+            </div> 
         </footer>
         )
 }

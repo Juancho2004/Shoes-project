@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import './main.css';
-import { fetchDataGenre } from '../Apis/genreApi';
+import { fetchDataGenre } from '../Apis/genreApi'
 
 
-export function Mujer() {
+export function Nike() {
+
+    // Como hacer que este codigo haga lo que te explique en el texto anterior
+
+
     const [data, setData] = useState(null)
 
     useEffect(() => {
@@ -17,19 +20,17 @@ export function Mujer() {
         }
         getData();
     }, [])
+    
 
 
   return (
     <>
-    <section className='mujer'>
-      <div className="title__container">
-        <h2 className='mujer__title'>Zapatillas para mujer</h2>
-      </div>
+    <section className='hombre'>
       {data ? (
-        <div className='mujer__container'>
+        <div className='hombre__container'>
           {data.map((item, index) => (
             <span key={index}>
-                {item && item.genero === 'F' ? (
+                {item && item.marca === 'Nike' ? (
                     <>
                       <img src={`/public/img/${item.imagen_url}`} alt="/" className='api_imgs'/>
                       <p>{item.genero}</p>
@@ -44,6 +45,17 @@ export function Mujer() {
         <p>Loading...</p>
       )}
     </section>
+
+    <div className="tiendatabs__containers--btns">
+            {data?.map((ele, index) => (
+            <ul 
+            className='TiendaTabs__btns'
+            key={index}
+            >
+                <li className= 'tiendaTabs__ctas uno' onClick={()=> llenarValores(ele)}>{ele.nombre}</li>
+            </ul>
+        ))}   
+    </div>
     </>
   )
 }

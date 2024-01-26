@@ -1,13 +1,21 @@
-.tienda__grilla{
-    width: 100%;
+.infinite-scroll-container{
+    margin: auto;
+    margin-top: 5em;
+    height: 35em;
+    width: 50em;
+    overflow: auto;
+}
+
+.tienda__grilla {
+    width: 99%;
     position: absolute;
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(2, 49%);
-    grid-template-rows: repeat(2, 1fr);
-    overflow: hidden;
-    margin-top: -25px;
-}   
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: minmax(min-content, max-content);
+    margin-top: 20px;
+}
+
 
 .tienda__title{
     font-family: var(--font-family-1);
@@ -40,4 +48,31 @@
 
 .contenido_productos li p {
     margin-left: 30px;
+}
+
+
+@media (min-width:1024px){
+    .tienda__grilla{
+        grid-template-columns: repeat(3, 23%);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .tienda__containers{
+        margin-left: 10px;
+    }
+
+    .img__muestra{
+        width: 100%;
+        height: 45vh;
+    }
+
+    .tienda__title{
+        font-size: 19px;
+    }
+
+    .tienda__generos{
+        font-size: 18px;
+    }
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { fetchData } from '../Apis/genreApi'
+import { fetchDataGenre } from '../Apis/genreApi'
 import './main.css';
+import { Navbar } from '../nav';
 
 
 export function Hombre() {
@@ -10,7 +11,7 @@ export function Hombre() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const fetcheddata = await fetchData()
+                const fetcheddata = await fetchDataGenre()
                 setData(fetcheddata)
             } catch (error) {
                 console.error(error)
@@ -22,8 +23,11 @@ export function Hombre() {
 
   return (
     <>
+    <Navbar/>
     <section className='hombre'>
-      <h2 className='hombre__title'>Zapatillas para hombre</h2>
+      {/* <div className="title__container">
+        <h2 className='hombre__title'>Zapatillas para hombre</h2>
+      </div> */}
       {data ? (
         <div className='hombre__container'>
           {data.map((item, index) => (

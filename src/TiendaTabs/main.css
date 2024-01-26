@@ -112,3 +112,18 @@
     font-size: 11px;
 }
 
+
+@media (min-width:1024px){
+
+    .TiendaTabs__title{
+        text-align: center;
+    }
+    .tiendatabs__containers--btns{
+        text-align: center;
+    }
+
+    .tiendaTabs__ctas:hover:before {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

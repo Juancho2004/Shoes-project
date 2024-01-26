@@ -10,9 +10,9 @@ import imgCirclex from './img/circlex.svg'
 import {Menu} from '../menu/index';
 import { useState } from 'react';
 import { Search } from '../search';
-import { Tooltip } from '../tooltip';
 import { User } from '../User';
 import { Cookie } from '../Cookie';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 
@@ -49,7 +49,7 @@ export function Navbar(){
     return(
         <>
         <header>
-        <Cookie/>
+        {/* <Cookie/> */}
             {/* <User/> */}
             {/* MENUHAMBURGUESA */}
             {showModal && <img src={imgClose} className='aside__close' onClick={handleCloseModal}/>}
@@ -64,8 +64,10 @@ export function Navbar(){
             {searchActual && <Search/>  }
             
 
-            <nav className="nav">
+            <nav className="nav__mobile">
+                <Link to={'/'}>
                     <img src={imgLogo} className='nav__logo'/>
+                </Link>
                 <div className="nav__container">
                 <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
                 <div className="iconSVG">
@@ -74,6 +76,32 @@ export function Navbar(){
                 </div>
                     <img src={imgSearch} className='nav__services' onClick={handleSearchActive}/>
                     <img src={imgMenu} className='nav__services' onClick={handleShowModal}/>
+                </div>
+            </nav>
+
+            <nav className="nav__desktop">
+                <Link to={'/'}>
+                    <img src={imgLogo} className='nav__logo'/>
+                </Link>
+                    <div className='nav__section'>
+                        <Link to={'/hombre'}>
+                            <div className="flex">
+                                <p className="bttn">Hombre</p>
+                            </div>
+                        </Link>
+                        <Link to={'/mujer'}>
+                            <div className="flex">
+                                <p className="bttn">Mujer</p>
+                            </div>
+                        </Link>
+                    </div>
+                <div className="nav__container">
+                <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
+                <div className="iconSVG">
+                  <img src={imgUser} alt="" onClick={handleActiveModal}/>
+                </div>
+                </div>
+                    <img src={imgSearch} className='nav__services nav__services--src' onClick={handleSearchActive}/>
                 </div>
             </nav>
         </header>

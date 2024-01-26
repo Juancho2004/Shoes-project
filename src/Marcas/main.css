@@ -1,0 +1,13 @@
+.pestañas{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pestañas__container{
+    display:flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.pestañas__container li {
+    list-style: none;
+}

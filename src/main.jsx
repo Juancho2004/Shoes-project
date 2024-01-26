@@ -12,6 +12,9 @@ import { PrincipalView } from './Principal-view';
 import { BlogPost } from './BlogPost';
 import { Hombre } from './Hombre';
 import { Mujer } from './Femenino';
+import { Nike } from './Zapatillas';
+import { AvisoLegal } from './Derechos';
+import { MensajesWhatsapp } from './MensajesWhatsapp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,6 +26,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/nike/:id" element={<BlogPost/>}/>
         <Route path="/hombre" element={<Hombre/>}/>
         <Route path="/mujer" element={<Mujer/>}/>
+        <Route path="/nike" element={<Nike/>}/>
+        <Route path="/avisolegal" element={<AvisoLegal/>}/>
+        <Route path="/mensaje" element={<MensajesWhatsapp/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
