@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LoadingDescription from '../loadingDescription'
-import { fetchData } from '../Apis/Api.js'
+import { fetchData } from '../Apis/api.js'
 import { Navbar } from '../nav'
 import { Link } from 'react-router-dom'
 

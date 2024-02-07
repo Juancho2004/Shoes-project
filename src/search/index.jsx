@@ -1,5 +1,5 @@
 import React ,{useEffect, useState}from 'react'
-import { fetchData } from '../Apis/Api';
+import { fetchData } from '../Apis/api';
 import {motion} from 'framer-motion'  
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './main.css';
