@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { fetchData } from '../Apis/Api'
+import { fetchData } from '../Apis/Api.js'
 import imgLogo from './logo.png';
 import './main.css';
 import { Link } from 'react-router-dom';

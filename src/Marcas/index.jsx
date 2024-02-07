@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { fetchData } from '../Apis/Api';
+import { fetchData } from '../Apis/Api.js';
 import { TiendaGrilla } from '../tiendaGrilla';
 import { Error } from '../error';
 import { useFetch } from '../TiendaTabs/useFetch';

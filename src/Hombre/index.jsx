@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { fetchData } from '../Apis/Api';
+import { fetchData } from '../Apis/Api.js';
 import { Link } from 'react-router-dom';
 import imgLogo from './logo.png';
 import LoadingDescription from '../loadingDescription';
