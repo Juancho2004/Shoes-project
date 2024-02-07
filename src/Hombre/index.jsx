@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { fetchDataGenre } from '../Apis/genreApi'
+import { fetchData } from '../Apis/Api';
+import { Link } from 'react-router-dom';
+import imgLogo from './logo.png';
+import LoadingDescription from '../loadingDescription';
 import './main.css';
-import { Navbar } from '../nav';
 
 
 export function Hombre() {
@@ -11,7 +13,7 @@ export function Hombre() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const fetcheddata = await fetchDataGenre()
+                const fetcheddata = await fetchData()
                 setData(fetcheddata)
             } catch (error) {
                 console.error(error)
@@ -23,19 +25,27 @@ export function Hombre() {
 
   return (
     <>
-    <Navbar/>
     <section className='hombre'>
-      {/* <div className="title__container">
-        <h2 className='hombre__title'>Zapatillas para hombre</h2>
-      </div> */}
+      <div className='hombre__nav'>
+        <Link to={'/'}>
+            <img src={imgLogo} className='hombre__logo'/>
+        </Link>
+        <Link to={'/mujer'}>
+            <p className='ov-btn-slide-left'> Ir a Mujer</p>
+        </Link>
+      </div>
       {data ? (
         <div className='hombre__container'>
           {data.map((item, index) => (
             <span key={index}>
-                {item && item.genero === 'M' ? (
+                {item && item.genero === 'Hombre' ? (
                     <>
-                      <img src={`/public/img/${item.imagen_url}`} alt="/" className='api_imgs'/>
-                      <p>{item.genero}</p>
+                    <Link to={`zapatilla/${item.id}`}>
+                      <img src={`/public/img/${item.imagen_url}`} alt="/" className='hombre_imgs'/>
+                      <p className='hombre__nombre'>{item.nombre}</p>
+                      <p className='hombre__genero'>Zapatillas - {item.genero}</p>
+                      <p className='hombre__talla'>{item.talla}</p>
+                    </Link>
                     </>
                 ): (
                     console.log(item)
@@ -44,7 +54,7 @@ export function Hombre() {
           ))}
         </div>
       ) : (
-        <p>Loading...</p>
+        <LoadingDescription/>
       )}
     </section>
     </>

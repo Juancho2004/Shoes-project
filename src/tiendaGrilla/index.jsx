@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import './main.css';
 import { Link } from 'react-router-dom';
+import LoadingDescription from '../loadingDescription';
+import './main.css';
 
 
  export const TiendaGrilla = () => {
@@ -43,14 +44,16 @@ import { Link } from 'react-router-dom';
         dataLength={zapatillas.length}
         next={fetchData}
         hasMore={hasMore}
-        loader={<p>Cargando...</p>}
+        loader={<LoadingDescription/>} 
       >
         <ul className='tienda__grilla'>
           {uniqueElements.map((zapatilla,index) => (
-            <Link to={`nike/${zapatilla.id}`}>
+            <Link to={`zapatilla/${zapatilla.id}`}>
               <li key={zapatilla.id}>
-                <img src={`/public/img/${zapatilla.imagen_url}`} alt="/" className="img__muestra" />
-                <p>{zapatilla.nombre}</p>
+                <img src={`/public/img/${zapatilla.imagen_url}`} alt="" className='img__muestra'/>
+                <p className='tienda__title'>{zapatilla.nombre}</p>
+                <p className='tienda__generos'>Zapatillas - {zapatilla.genero}</p>
+                <p className='tienda__price'>{zapatilla.talla}</p>
               </li>
             </Link>
           ))}

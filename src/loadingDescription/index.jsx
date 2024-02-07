@@ -4,6 +4,8 @@ import './main.css';
 
 export default function LoadingDescription() {
   return (
-    <div id="html-spinner__2"></div>
+    <section className='loading'>
+      <div id="html-spinner__2"></div>
+    </section>
   )
 }

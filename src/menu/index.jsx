@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
-import './main.css'
-// import { AsideSection } from '../asideSection';
+import {motion} from 'framer-motion'  
+import { Link } from 'react-router-dom'
 import imgJordan from './img/jordan.png'
 import imgNewbalance from './img/new-balance.png'
-import imgUnder from './img/under.png'
-import imgConverse from './img/converse.png'
+import imgNike from './img/nike.png'
+import imgAdidas from './img/adidas.png'
 import imgBasket from './img/basket.svg'
 import imgShopping from './img/shopping.svg'
 import imgStore from './img/store.svg'
 import imgHelp from './img/help.svg'
 // import imgInfo from './img/info.svg'
-import {motion} from 'framer-motion'  
-import { Link } from 'react-router-dom'
+import './main.css'
 
 
 const variants = {
@@ -23,7 +22,7 @@ const variants = {
   close: {
     transform :'translateX(0%)'
   }
-
+  
 }
 
 
@@ -39,32 +38,32 @@ export const Menu = () =>{
       variants={variants}
       >
 
+        <p className='aside__title'>👟Calzado</p>
 
         <div className='asideSection'>
           <Link to={'/hombre'}>
-            <p className=''>Hombre</p>
+            <p className=''>👩🏻Mujer</p>
           </Link>
           <Link to={'/mujer'}>
-            <p className=''>Mujer</p>
+            <p className=''>👱🏼‍♂️Hombre</p>
           </Link>
         </div>
         
         <span className='aside__span'>
           <figure className='aside__figure'>
-            <img src={imgJordan} />
-            <p>Jordan</p>
+            <Link to={'/nike'}>
+              <p>Nike</p>
+            </Link>
           </figure>
           <figure className='aside__figure aside__figure--2'>
-          <img src={imgConverse}/>
-          <p>Converse</p>
+            <Link to={'/adidas'}>
+              <p>Adidas</p>
+            </Link>
           </figure> 
-          <figure className='aside__figure aside__figure--2'>
-          <img src={imgNewbalance}/>
-          <p>New Balance</p>
-          </figure> 
-          <figure className='aside__figure aside__figure--2'>
-          <img src={imgUnder}/>
-          <p>Under Armour</p>
+          <figure className='aside__figure aside__figure--2'>     
+          <Link to={'/newBalance'}>
+            <p>New Balance</p>
+          </Link>    
           </figure> 
         </span>
 
@@ -74,7 +73,7 @@ export const Menu = () =>{
           <a href="#" className='aside__btn aside__btn--mdf'>Iniciar sesion</a>
         </div> */}
 
-        <div className="aside__links">
+        {/* <div className="aside__links">
           <figure>
             <img src={imgShopping}/>
             <a href="#">Cesta</a>
@@ -91,7 +90,7 @@ export const Menu = () =>{
             <img src={imgHelp}/>
             <a href="#">Ayuda</a>
           </figure>
-        </div>
+        </div> */}
       </motion.aside> 
     </div>
     );

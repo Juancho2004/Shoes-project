@@ -1,0 +1,42 @@
+.nike{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    border-top: 1px solid #cccccc;
+}
+
+
+
+.nike_img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nike__nombre{
+    font-family: var(--font-family-1);
+    font-size: 15px;
+}
+
+.nike__genero{
+    position: relative;
+    top: -15px;
+    color: #858585; 
+    font-family: var(--font-family-1);
+    font-size: 13px;
+}
+
+.nike__talla{
+    position: relative;
+    top: -25px; 
+    font-size: 12px;
+    font-family: var(--font-family-1);
+}
+
+
+.nike__container{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+

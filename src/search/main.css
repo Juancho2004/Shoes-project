@@ -27,58 +27,61 @@
     height: 100vh;
     background-color: #fff;
     overflow-y: scroll;
-
-    
 }
 
 .aside__input{
-    width: 90%;
-    margin: 0 auto;
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
     padding: 8px 0;
 }
 
 
 .input__cerrar{
     position: absolute;
-    right: 55px;
-    top: 16px;
+    right: 30px;
+    top: 15px;
     z-index: 2;
     cursor: pointer;
-
 }
 
 .aside__input input{
-    width: 80%;
+    width: 100%;
+    height: 50px;
     position: relative;
     visibility: visible;
     background: #f5f5f5;
     padding: 8px 50px 8px 44px;
-    margin: 0 5px 0 0;
+    margin: -6px 0px 0px 0px;
     outline: none;
     border: none;
-    border-radius: 20px;
     transition: background .15s,color .35s .5s;
 }
 
 .lupa{
     position: absolute;
-    left: 10px;
+    left: 45px;
     z-index: 1;
 }
 
 
 
 .input__texts{
-    width: 85%;
-    margin: 0 auto;
-    padding: 48px 0px 0px;
+    display: flex;
+    justify-content: center;
+    width: 91%;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.input__texts ul li {
+    list-style: none;
 }
 
 .input__texts p{
     font-family: var(--font-family-1);
-    color: #757575;
     cursor: pointer;
 }
 
@@ -89,4 +92,87 @@
     text-decoration: none;
     color: #000;
     font-family: var(--font-family-1);
+}
+
+
+.img__input{
+    width: 100%;
+    padding-left: 5px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.previas_search{
+    padding: 40px;
+}
+
+.previas_search h1 {
+    font-family: var(--font-family-1);
+    color: #707072;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.previas_search p {
+    font-family: var(--font-family-1);
+    font-size: 22px;
+    color: #111111;
+    font-weight: 600;
+
+}
+
+@media (min-width:1280px){
+
+    .aside__input input{
+        text-align: center;
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .input__cerrar{
+        position: absolute;
+        top: 16px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .lupa{
+        position: absolute;
+        left: 350px;
+        z-index: 1;
+    }
+
+    .input__texts{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .img__input{
+        width: 20vw;
+        height: 40vh;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    
+    .input__texts p{
+        font-size: 15px;
+    }
+
+    .previas_search{
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    .search__container{
+        display: grid;
+        grid-template-columns: repeat(3, 35%);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
 }

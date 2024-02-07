@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { fetchDataGenre } from '../Apis/genreApi';
+import { fetchData } from '../Apis/Api';
 import { TiendaGrilla } from '../tiendaGrilla';
 import { Error } from '../error';
 import { useFetch } from '../TiendaTabs/useFetch';
-import Loading from '../loading';
-import './main.css';
 import { Link } from 'react-router-dom';
+import LoadingDescription from '../loadingDescription';
+import './main.css';
 
 
 export function Marcas() {
@@ -17,7 +17,7 @@ export function Marcas() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const fetchedData = await fetchDataGenre();
+        const fetchedData = await fetchData();
         setData(fetchedData); 
       } catch (error) {
         console.error(error);
@@ -49,7 +49,7 @@ export function Marcas() {
 
       <section className='contenido'>
         {error && <Error>{error}</Error>}
-        {loading && <Loading/>}
+        {loading && <LoadingDescription/>}
 
         { marcaSeleccionada === '' && !loading && !error ? (
           <TiendaGrilla/>
@@ -58,7 +58,7 @@ export function Marcas() {
             {dataFiltrada?.map((ele) => ( 
               <ul className='tienda__containers'>
                     <li key={ele.id}>
-                    <Link to={`nike/${ele.id}`}>
+                    <Link to={`zapatilla/${ele.id}`}>
                         <img src={`/public/img/${ele.imagen_url}`} alt="" className='img__muestra'/>
                         <p className='tienda__title'>{ele.nombre}</p>
                         <p className='tienda__generos'>Zapatillas - {ele.genero}</p>

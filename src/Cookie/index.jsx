@@ -19,8 +19,8 @@ export const Cookie = () => {
           <section className='cookie' >
           <h2>Al hacer clic en "Aceptar cookies", aceptas el uso de cookies en este sitio web para mejorar la navegación, personalizar contenido y analizar el tráfico del sitio.</h2>
           <span>
-            <a href="#" onClick={aceptarCondiciones}>Aceptar</a>
-            <a href="/">rechazar</a>
+            <a href="#" onClick={aceptarCondiciones}>Aceptar Cookies</a>
+            <a href="/">Rechazar Cookies</a>
           </span>
         </section>
           )}

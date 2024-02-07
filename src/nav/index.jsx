@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 
 export function Navbar(){
     const [showModal, setShowModal] = useState(false)
-    const [showActual, setActualizate] = useState(false)
+    // const [showActual, setActualizate] = useState(false)
     const [searchActual, searchActualizate] = useState(false)
   
 
@@ -30,13 +30,13 @@ export function Navbar(){
         searchActualizate(false)
     }
 
-    function handleActiveModal(){
-        setActualizate(true)
-    }
+    // function handleActiveModal(){
+    //     setActualizate(true)
+    // }
 
-    function handleDesactiveModal(){
-        setActualizate(false)
-    }
+    // function handleDesactiveModal(){
+    //     setActualizate(false)
+    // }
 
     function handleShowModal(){
         setShowModal(true)
@@ -50,14 +50,13 @@ export function Navbar(){
         <>
         <header>
         {/* <Cookie/> */}
-            {/* <User/> */}
             {/* MENUHAMBURGUESA */}
             {showModal && <img src={imgClose} className='aside__close' onClick={handleCloseModal}/>}
             {showModal && <Menu/>}
 
             {/* CESTA */}
-            {showActual && <img src={imgLogo2} className='user_logo' onClick={handleDesactiveModal}/>}
-            {showActual  && <User/>}
+            {/* {showActual && <img src={imgLogo2} className='user_logo' onClick={handleDesactiveModal}/>}
+            {showActual  && <User/>} */}
 
             {/* SEARCH */}
             {searchActual && <img src={imgCirclex} className='input__cerrar' onClick={handleSearchDesactive}/>}
@@ -69,11 +68,11 @@ export function Navbar(){
                     <img src={imgLogo} className='nav__logo'/>
                 </Link>
                 <div className="nav__container">
-                <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
+                {/* <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
                 <div className="iconSVG">
                   <img src={imgUser} alt="" onClick={handleActiveModal}/>
                 </div>
-                </div>
+                </div> */}
                     <img src={imgSearch} className='nav__services' onClick={handleSearchActive}/>
                     <img src={imgMenu} className='nav__services' onClick={handleShowModal}/>
                 </div>
@@ -96,11 +95,11 @@ export function Navbar(){
                         </Link>
                     </div>
                 <div className="nav__container">
-                <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
+                {/* <div className="iconDiv" tooltip="Mi cuenta"  onClick={handleActiveModal}>
                 <div className="iconSVG">
                   <img src={imgUser} alt="" onClick={handleActiveModal}/>
                 </div>
-                </div>
+                </div> */}
                     <img src={imgSearch} className='nav__services nav__services--src' onClick={handleSearchActive}/>
                 </div>
             </nav>

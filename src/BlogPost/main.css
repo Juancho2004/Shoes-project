@@ -1,16 +1,19 @@
 .detalles{
+    display: flex;
+    align-items: end;
+    justify-content: center;
     width: 100%;
+    height: 85vh;
     border-top: 1px solid #e5e5e5;
 }
 
 .detalles_container{
+    text-align: center;
     width: 80%;
     height: 75vh;
     margin: 0 auto;
     margin-top: 15px;
-    padding: 20px 0;
-    border-radius: 20px;
-    background-color: #f5f5f5;
+
 }
 
 .Tienda__fixed{
@@ -32,22 +35,26 @@
 
 .marca{
     color: #111111;
-    font-size: 24px;
+    font-size: 15px;
     font-family: var(--font-family-1);
-    margin-top: 30px;
+    margin-top: 25px;
     text-transform: capitalize;
+    margin-right: 30px;
 }
 
 .genero{
-    font-size: 16px;
+    font-size: 12px;
     font-family: var(--font-family-1);    
     padding-bottom: 4px;
     font-weight: bold;
+    margin-right: 30px;
 }
 
 .talla{
-    font-size: 20px;
+    font-size: 12px;
+    margin-right: 30px;
 }
+
 
 
 @media (min-width:1024px){
@@ -60,7 +67,6 @@
         margin-top: 15px;
         padding: 20px 0;
         border-radius: 20px;
-        background-color: #f5f5f5;
     }
     
     .img__data{
@@ -72,5 +78,27 @@
     .Tienda__fixed{
         bottom: 40px;
         right: 20px;
+    }
+
+    .marca{
+        color: #111111;
+        font-size: 15px;
+        font-family: var(--font-family-1);
+        margin-top: 25px;
+        text-transform: capitalize;
+        margin-right: 3px;
+    }
+
+    .genero{
+        font-size: 12px;
+        font-family: var(--font-family-1);    
+        padding-bottom: 4px;
+        font-weight: bold;
+        margin-right: 3px;
+    }
+
+    .talla{
+        font-size: 12px;
+        margin-right: 3px;
     }
 }

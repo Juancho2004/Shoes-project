@@ -35,6 +35,13 @@ import './main.css';
     const uniqueElements = data
     ? data.filter((ele, index, self) => self.findIndex((item) => item.marca === ele.marca) === index)
     : [];
+
+    
+  //   useEffect(()=> {
+  //     return () => {
+  //         history('/')
+  //     }
+  // }, [history])
   
     return (
       <>

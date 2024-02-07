@@ -37,7 +37,7 @@ export  const FooterAccordion = () => {
     
             <div className="tienda__avisos">
                 <a href="#">© 2023 Bodega Cali, Inc. Todos los derechos reservados</a>
-                <Link to={`/TerminosUso`}>
+                <Link to={`/avisoLegal`}>
                   <p>Aviso de Legal</p>
                 </Link>
             </div>
