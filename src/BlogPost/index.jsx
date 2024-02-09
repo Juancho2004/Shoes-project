@@ -13,7 +13,7 @@ import './main.css';
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch(`http://127.0.0.1:5000/zapatillas_id/${id}`);
+          const response = await fetch(`http://195.35.37.45:5000/zapatillas_id/${id}`);
           const respuesta = await response.json();
           console.log('data', respuesta);
           

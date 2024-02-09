@@ -16,7 +16,7 @@ import './main.css';
     setLoading(true);
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/load-more-zapatillas/${page}`);
+      const response = await fetch(`http://195.35.37.45:5000/load-more-zapatillas/${page}`);
       const data = await response.json();
       
       

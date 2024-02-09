@@ -9,7 +9,7 @@ import './main.css';
 
 
 export function Marcas() {
-  const { loading, error } = useFetch(`http://127.0.0.1:5000/zapatillas`)
+  const { loading, error } = useFetch(`http://195.35.37.45:5000/zapatillas`)
   const [data, setData] = useState(null);
   const [marcaSeleccionada, setMarcaSeleccionada] = useState('');
  
