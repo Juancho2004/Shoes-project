@@ -32,7 +32,6 @@ export const Menu = () =>{
     <div className='pre-scrim is-open'>
       <motion.aside 
       className='aside'
-
       initial='open'
       animate='close'
       variants={variants}

@@ -46,11 +46,6 @@ export const Search = () =>{
     }): [];
 
 
-    // useEffect(()=> {
-    //     return () => {
-    //         history('/')
-    //     }
-    // }, [history])
 
     return(
     <div className='search-scrim search-open'>
